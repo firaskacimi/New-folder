@@ -1,0 +1,135 @@
+/* Custom animations for the authentication pages */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out;
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 3s ease infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.bg-300\% {
+  background-size: 300% 300%;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Focus states for better accessibility */
+.focus\:ring-cyan-500\/20:focus {
+  --tw-ring-color: rgb(6 182 212 / 0.2);
+}
+
+.focus\:ring-red-500\/20:focus {
+  --tw-ring-color: rgb(239 68 68 / 0.2);
+}
+
+/* Custom gradient backgrounds */
+.bg-gradient-gaming {
+  background: linear-gradient(180deg, #050505 0%, #0a0a0a 40%, #111111 100%);
+}
+
+/* Hover effects for buttons */
+.btn-primary {
+  @apply bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-bold;
+  @apply shadow-[0_0_30px_rgba(0,217,255,0.3)];
+  @apply hover:shadow-[0_0_50px_rgba(0,217,255,0.6)];
+  @apply hover:from-cyan-400 hover:to-purple-400;
+  @apply transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply border-2 border-purple-500 text-purple-400;
+  @apply hover:bg-purple-600 hover:text-white;
+  @apply shadow-[0_0_30px_rgba(168,85,247,0.3)];
+  @apply hover:shadow-[0_0_50px_rgba(168,85,247,0.5)];
+  @apply transition-all duration-300;
+}
+
+/* Form input styles */
+.input-primary {
+  @apply w-full px-4 py-3 bg-neutral-800 border border-gray-600 rounded-xl;
+  @apply text-white placeholder-gray-400;
+  @apply focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20;
+  @apply transition-all duration-300;
+}
+
+.input-error {
+  @apply border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20;
+}
+
+/* Card styles */
+.card-auth {
+  @apply bg-neutral-900/80 backdrop-blur-lg border border-gray-700 rounded-2xl;
+  @apply shadow-[0_0_40px_rgba(0,0,0,0.5)];
+}
+
+/* Text gradient styles */
+.text-gradient-primary {
+  @apply bg-gradient-to-r from-cyan-300 via-purple-500 to-purple-500;
+  @apply bg-clip-text text-transparent;
+}
+
+.text-gradient-secondary {
+  @apply bg-gradient-to-r from-purple-400 to-fuchsia-500;
+  @apply bg-clip-text text-transparent;
+}
+
+.text-gradient-accent {
+  @apply bg-gradient-to-r from-cyan-400 via-purple-400 to-fuchsia-400;
+  @apply bg-clip-text text-transparent;
+}
